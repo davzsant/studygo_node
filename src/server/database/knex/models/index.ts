@@ -1,7 +1,7 @@
-import { user } from "./user";
+import userModel from "./user";
 import postModel from "./post";
 
 export default {
-    user,
+    userModel,
     postModel
 }

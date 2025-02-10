@@ -1,12 +1,12 @@
-import { Knex } from "../..";
+import { Knex } from "../.."
 
 
-const getAll = () => {
-    console.log("Buscando todos os posts")
+const get = (post_id:number) => {
+    console.log("Buscando um post")
     return Knex
         .select('*')
         .from('post')
-        /* .innerJoin('user','user.id','post.user_id') */
+        .where('post.id',post_id)
 }
 
-export default getAll
+export default get
