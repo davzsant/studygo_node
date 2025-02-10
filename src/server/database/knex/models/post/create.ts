@@ -5,7 +5,7 @@ import { Knex } from "../..";
 
 
 const create = async(data:Omit<PostType,'id'>) => {
-    console.log(data)
+    console.log("Criando post")
     try{
         const [result] = await Knex.from('post').insert(data)
         console.log("RESULTADO:",result)

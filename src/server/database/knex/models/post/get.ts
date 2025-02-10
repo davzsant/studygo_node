@@ -2,6 +2,7 @@ import { Knex } from "../..";
 
 
 const getAll = () => {
+    console.log("Buscando todos os posts")
     return Knex
         .select('*')
         .from('post')
