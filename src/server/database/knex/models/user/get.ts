@@ -5,8 +5,9 @@ const get = (user_id:number) => {
     console.log("Buscando um user")
     return Knex
         .select('*')
-        .from('user')
-        .where('user.id',user_id)
+        .from('User')
+        .where('id',user_id)
+        .first()
 }
 
 export default get

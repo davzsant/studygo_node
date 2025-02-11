@@ -1,5 +1,5 @@
-import get from "./getAll";
-import getAll from "./get";
+import get from "./get";
+import getAll from "./getAll";
 import create from "./create";
 
 export type PostType = {

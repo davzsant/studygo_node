@@ -6,7 +6,8 @@ const get = (post_id:number) => {
     return Knex
         .select('*')
         .from('post')
-        .where('post.id',post_id)
+        .where('id',post_id)
+        .first()
 }
 
 export default get

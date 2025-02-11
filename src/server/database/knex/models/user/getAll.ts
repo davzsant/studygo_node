@@ -5,7 +5,7 @@ const getAll = () => {
     console.log("Buscando todos os users")
     return Knex
         .select('*')
-        .from('user')
+        .from('User')
         /* .innerJoin('user','user.id','post.user_id') */
 }
 
