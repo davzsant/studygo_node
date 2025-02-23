@@ -16,6 +16,7 @@ const postValidation = z.object({
 
 
 export const create = async (req:Request<{},{},Omit<PostType,'id'>>,res: Response) => {
+    console.log(req.body)
     const createPostValidation = postValidation.safeParse(req.body)
     if(!createPostValidation.success){
         console.log("Erro na criação do usuario")
@@ -33,7 +34,7 @@ export const create = async (req:Request<{},{},Omit<PostType,'id'>>,res: Respons
         })
         return
     }
-    console.log("O ID DO POST È:",post_id)
+    console.log("Novo Post criado")
     res.status(201).json(post_id)
 
 }

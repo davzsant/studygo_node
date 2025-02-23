@@ -11,7 +11,7 @@ const userValidation = z.object({
     crated: z.date().optional(),
     password: z.string().min(6,"É necessario no minimo 6 caracters para criar a senha"),
     description: z.string().optional(),
-    birth: z.date().optional()
+    birth: z.string().optional()
 })
 
 export const create = async(req:Request<{},{},Omit<UserType,'id'>>,res: Response) => {
@@ -31,7 +31,7 @@ export const create = async(req:Request<{},{},Omit<UserType,'id'>>,res: Response
         })
         return
     }
-    console.log("O ID DO USER È:",user_id)
-    res.json(user_id)
+    console.log("User Criado")
+    res.status(201).json(user_id)
 
 }
