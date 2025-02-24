@@ -7,7 +7,7 @@ import { Knex } from "../..";
 const getAll = async (queryParams?: string) => {
     if(queryParams) console.log(queryParams);
     try{
-        const post = await Knex.select('*').from('post')
+        const post = await Knex.select('post.*',"user.id as id_user","user.name", "user.username").from('post')
             .innerJoin('user','user.id','post.user_id')
         return post
     }catch(error)
