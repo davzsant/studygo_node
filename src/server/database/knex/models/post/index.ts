@@ -9,9 +9,17 @@ export type PostType = {
     title: string,
     body: string,
     user_id: number,
-    question_id?: string,
     created: string,
-    resume?: string
+    resume?: string,
+    subject?: string,
+    topic?:string,
+    subtopic?:string,
+    genre?:string,
+    category?:string,
+    master_id?:number,
+    just_master?: boolean,
+    difficulty_level?:number,
+    updated?: string
 }
 
 const postModel = {

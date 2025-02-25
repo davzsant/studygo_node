@@ -8,9 +8,18 @@ const postValidation = z.object({
     title:  z.string().min(1,'O titulo é obrigatório'),
     body: z.string().min(1,'O texto é obrigatório'),
     user_id: z.number(),
-    question_id: z.number().optional(),
     created: z.date().optional(),
-    resume: z.string().optional()
+    resume: z.string().optional(),
+    subject: z.string().optional(),
+    topic: z.string().optional(),
+    subtopic: z.string().optional(),
+    updated: z.date().optional(),
+    genre: z.string().optional(),
+    category: z.string().optional(),
+    master_id: z.number().optional(),
+    just_master: z.boolean().optional(),
+    difficulty_level: z.number().optional()
+
     
 })
 
