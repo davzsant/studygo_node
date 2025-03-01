@@ -11,13 +11,13 @@ type QueryParams = {
 export const getAll = async(req: Request<{},{},{},Partial<QueryParams>>,res:Response) =>{
     const allPosts = await models.postModel.getAll(req.query)
     if (allPosts instanceof Error){
-        res.status(500).json({ errors: allPosts })
+        res.status(500).json({ errors: {...allPosts,path: "Problema aqui no allPosts"} })
         return
     }
     const count = await models.postModel.count(req.query)
     console.log(count)
     if(count instanceof Error){
-        res.status(500).json({ errors: allPosts })
+        res.status(500).json({ errors: {count,path: "Problema aqui no count"} })
         return
     }
     
