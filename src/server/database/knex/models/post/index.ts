@@ -3,6 +3,7 @@ import getAll from "./getAll";
 import create from "./create";
 import update from "./update";
 import deletePost from "./delete";
+import count from "./count";
 
 export type PostType = {
     id: number,
@@ -27,7 +28,8 @@ const postModel = {
     getAll,
     create, 
     update,
-    deletePost
+    deletePost,
+    count
 }
 
 export default postModel

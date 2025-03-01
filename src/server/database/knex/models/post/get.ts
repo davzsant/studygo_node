@@ -5,7 +5,7 @@ import { Knex } from "../.."
 const get = async (post_id:number):Promise<Error|[]> => {
     try{
         const post = await Knex.select('post.*',"user.name", "user.username").from('post').where('post.id',post_id)
-            .innerJoin('user','user.id','post.user_id').first()
+            .innerJoin('user','user.id as user_id','post.user_id').limit(15).first()
             console.log(post)
         return post
     }catch(error)
