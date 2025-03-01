@@ -14,7 +14,7 @@ const getAll = async (queryParams?: Partial<QueryParams>,limit:number = 10, page
     if(queryParams) console.log(queryParams);
     try{
         const post = Knex.select('post.*',"user.id as id_user","user.name", "user.username").from('post')
-            .innerJoin('user','user.id','post.user_id').limit(limit).offset((page - 1) * limit)
+            .innerJoin('user','user.id','post.user_id').limit(limit).offset((page - 1) * limit).orderBy('post.id','desc')
 
         if(queryParams){
             if(queryParams.user_name){
@@ -25,7 +25,7 @@ const getAll = async (queryParams?: Partial<QueryParams>,limit:number = 10, page
                     .orWhere('post.body','like',`%${queryParams.search}%`)
             }
         }
-        return post
+        return await post
     }catch(error)
     {
         return error as Error
