@@ -21,7 +21,11 @@ export type PostType = {
     just_master?: boolean,
     difficulty_level?:number,
     updated?: string,
-    privacy?: number
+    privacy?: number,
+    category?: string,
+    subject?: string,
+    topic?: string,
+    subtopic?: string,
 }
 
 const postModel = {

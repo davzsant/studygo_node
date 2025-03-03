@@ -18,7 +18,11 @@ const postValidation = z.object({
     category_id: z.string().optional(),
     master_id: z.number().optional(),
     just_master: z.boolean().optional(),
-    difficulty_level: z.number().optional()
+    difficulty_level: z.number().optional(),
+    subject: z.string().optional(),
+    topic: z.string().optional(),
+    subtopic: z.string().optional(),
+    category: z.string().optional(),
 
     
 })

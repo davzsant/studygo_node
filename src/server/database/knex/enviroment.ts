@@ -12,6 +12,9 @@ export const development:Knex.Config = {
         password: process.env.DB_PASSWORD,
         port: Number(process.env.DB_PORT || 3306),
         user: process.env.DB_USER
+    },
+    seeds: {
+        directory: './seeds'
     }
 }
 
