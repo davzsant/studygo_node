@@ -23,6 +23,7 @@ const postValidation = z.object({
     topic: z.string().optional(),
     subtopic: z.string().optional(),
     category: z.string().optional(),
+    autor: z.string().optional()
 
     
 })

@@ -9,6 +9,7 @@ export type PostType = {
     id: number,
     title: string,
     body: string,
+    autor?: string,
     user_id: number,
     created: string,
     resume?: string,

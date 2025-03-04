@@ -13,8 +13,8 @@ const create = async(post_data:Omit<PostType,'id'>): Promise<Error|number> => {
 
 
         console.log(subject,topic,subject,category)
-        const { title,body, user_id  } = post_data
-        const post = {title,body,user_id,subject_id, topic_id, category_id, subtopic_id}
+        const { title,body, user_id, autor  } = post_data
+        const post = { title, body , user_id , autor , subject_id, topic_id, category_id, subtopic_id}
         const [result] = await Knex.from('post').insert(post)
         return result
     }
