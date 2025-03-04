@@ -1,6 +1,6 @@
 import knex from "knex";
 
-import { development } from "./Enviroment";
+import { development } from "./enviroment";
 
 
 
